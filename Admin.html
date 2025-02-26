@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Villain X Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <h1 class="store-name">Villain X Store</h1>
+        </div>
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropbtn">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="/">Home</a>
+                    <a href="/admin.html" id="admin-link">Admin</a>
+                    <a href="#" id="logout-btn" style="display: none;">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Login -->
+    <div id="admin-login-container">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+            <div class="form-group">
+                <label for="admin-password">Enter Admin Password:</label>
+                <input type="password" id="admin-password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Admin Form (Hidden Until Login) -->
+    <div class="admin-form-container" id="admin-panel" style="display: none;">
+        <h2>Add New Item</h2>
+        <form id="item-form">
+            <div class="form-group">
+                <label for="item-name">Item Name:</label>
+                <input type="text" id="item-name" required>
+            </div>
+            <div class="form-group">
+                <label for="item-price">Price:</label>
+                <input type="number" id="item-price" required>
+            </div>
+            <div class="form-group">
+                <label for="item-image">Upload Image:</label>
+                <input type="file" id="item-image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="item-telegram">Telegram Username:</label>
+                <input type="text" id="item-telegram" required>
+            </div>
+            <button type="submit">Add Item</button>
+        </form>
+    </div>
+
+    <!-- Items List for Admin -->
+    <div class="items-container" id="admin-items-container" style="display: none;">
+        <!-- Items will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
